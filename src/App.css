@@ -1,38 +1,201 @@
-.App {
-  text-align: center;
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  --main-padding: 3rem;
+  --main-color: #000;
+  /* --padding-bottom: 3rem; */
+  /* --padding-left-right: 3rem; */
+}
+body {
+  line-height: 1.5;
+  font-family: sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:visited{
+  color: red;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* portfolio section */
+
+.portfolio_container {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(252, 246, 244);
+  padding: 1rem var(--main-padding) var(--main-padding);
+  position: relative;
+}
+
+.links {
+  color: var(--main-color);
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: cursive;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+}
+.links::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: var(--main-color);
+  position: absolute;
+  bottom: -5px; 
+  left: 0;
+  /* transform: translateX(-50%); */
+  transition: 500ms;
+}
+.links:hover::after{
+  width: 100%;
+}
+.links:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+a:visited {
+  color: inherit;
+}
+
+.allPageLinks {
+  position: absolute;
+  /* padding: 1rem; */
+}
+
+.projects {
+  left: -2%;
+  top: 50%;
+  transform: translateY(-50%) rotate(-90deg);
+}
+.about {
+  bottom: 0;
+  left: 25%;
+  transform: translateX(-25%);
+  margin-bottom: 1rem;
+}
+.myskill {
+  bottom: 0;
+  left: 75%;
+  transform: translateX(-75%);
+  margin-bottom: 1rem;
+}
+.socialLinks {
+  bottom: 15rem;
+  right: 0;
+  transform: translateX(-75%);
+
+}
+.socialLinks .linksDiv {
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+.socialLinks a{
+  width: 35px;
+  height: 35px;
+  margin-bottom: .5rem;
+}
+/* .socialLinks a:hover{
+  
+} */
+.socialLinks a:last-child{
+  margin-bottom: 0;
+}
+.socialLinks a svg {
+  width: 100%;
+  height: 100%;
+  padding-top: 0.2rem;
+}
+.socialLinks::after {
+  content: "";
+  width: 2px;
+  height: 15rem;
+  background-color: var(--main-color);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+
+
+
+/* header */
+.header {
+  width: 100%;
+  height: 3rem;
+  /* background-color: rgb(41, 41, 41); */
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+}
+.header svg {
+  font-size: 5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  fill: var(--main-color);
+}
+.header .contactMe {
+  padding-right: 2rem;
+}
+
+
+
+
+
+
+/*  */
+.heroSection {
+  width: 100%;
+  height: calc(100vh - var(--main-padding) - 1rem - 3rem); /* top and bottom padding + navbar height */
+  /* background-color: aquamarine; */
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+}
+.heroSection .contentDiv {
+  /* background-color: bisque; */
+  width: 90%;
+  max-width: 900px;
+  height: 75%;
+  border: 4px solid rgb(78, 71, 71);
+  display: flex;
+  justify-content: flex-start;
+}
+.contentDiv div {
+  flex: 1;
+  padding: var(--padding-top-bottom) var(--padding-left-right);
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+
+
+
+
+/* media queries */
+
+/* for mobile devices */
+@media screen and (max-width: 600px) {
+  .portfolio_container {
+    padding: 3rem 2rem;
   }
 }
