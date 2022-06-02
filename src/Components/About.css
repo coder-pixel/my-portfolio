@@ -1,0 +1,57 @@
+.aboutme{
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* background-color: aquamarine; */
+    margin: 12rem auto 0;
+}
+.aboutme_content{
+    width: 45%;
+    max-width: 600px;
+    height: auto;
+    min-height: 400px;
+    color: var(--main-text-color);
+    padding: 2rem;
+    border: 2px solid var(--main-text-color);
+    border-radius: 5px;
+    position: relative;
+}
+.aboutme_content::before{
+    content: "About";
+    font-size: 4rem;
+    font-weight: 800;
+    font-family: "Open Sans", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--main-text-color);
+    opacity: .4;
+    z-index: 0;
+    position: absolute;
+    top: -25%;
+    left: -10%;
+}
+.aboutme_content:last-child::before{
+    content: "Skills";
+}
+
+.aboutme_content p{
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    color: var(--main-text-color);
+    letter-spacing: 1px;
+    font-family: "Poppins", sans-serif;
+}
+
+@media screen and (max-width: 1000px) {
+    .aboutme{
+        flex-direction: column;
+    }
+    .aboutme_content{
+        width: 100%;
+        max-width: 500px;
+    }
+    .aboutme_content:first-child{
+        margin-bottom: 10rem;
+    }
+}
