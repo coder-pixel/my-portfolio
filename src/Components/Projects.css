@@ -1,27 +1,42 @@
 .projectsDiv{
     /* background-color: pink; */
-    width: 90%;
+    width: 100%;
     max-width: 1200px;
     min-height: 100vh;
     height: auto;
-    margin: 5rem auto 0;
+    margin: 10rem auto 0;
 
     display: grid;
     grid-gap: 2rem;
-    grid-template-columns: repeat(auto-fill, 300px);
+    /* grid-template-columns: repeat(auto-fill, 300px); */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 350px));
     justify-content: center;
+}
+.projectsDiv span{
+    position: absolute;
+    top: 5rem;
+    font-size: calc(2rem + 5vw);
+    font-weight: 800;
+    font-family: "Open Sans", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--main-text-color);
+    opacity: .4;
+    z-index: 0;
 }
 
 .project{
     /* background-color: aliceblue; */
-    height: 330px;
+    height: auto;
     background-color: var(--main-text-color);
     padding: 2rem;
     color: var(--main-background-color);
     border: 2px solid var(--main-text-color);
     border-top-right-radius: 50px;
     border-bottom-left-radius: 50px;
+    transition: 500ms;
 }
+
 .project:hover{
     background-color: var(--main-background-color);
     color: var(--main-text-color);
@@ -45,7 +60,9 @@
     width: 100%;
     /* background-color: aqua; */
 }
-.project .projects_btnGrp > div{
+.project .projects_btnGrp button{
+    border: none;
+    outline: none;
     width: 45%;
     background-color: var(--main-background-color);
     color: var(--main-text-color);
@@ -54,30 +71,40 @@
     justify-content: center;
     align-items: center;
     border-bottom-left-radius: 50px;
+
+    padding: .8rem 2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
     position: relative;
 }
-.project .projects_btnGrp > div svg{
+.project:hover button{
+    color: var(--main-background-color);
+    background-color: var(--main-text-color);
+}
+.project:hover button svg{
+    fill: var(--main-background-color);
+}
+.project .projects_btnGrp button svg{
+    fill: var(--main-text-color);
     width: 10px;
     height: 10px;
     position: absolute;
     top: 20%;
     right: 20%;
 }
-.project .projects_btnGrp button{
-    border: none;
-    outline: none;
-    border-radius: inherit;
-    padding: .8rem 2rem;
-    font-weight: 600;
-    letter-spacing: 1px;
-    background-color: inherit;
-    color: inherit;
-}
-.project .projects_btnGrp div:last-child{
+
+.project .projects_btnGrp button:last-child{
     border-radius: 0;
     border-top-right-radius: 50px;
-    padding-right: .5rem;
+    padding-right: 1.8rem;
 }
-.project button:hover svg{
-    fill: red;
+.project:hover button svg{
+    fill: var(--main-background-color);
+}
+
+
+@media screen and (max-width: 600px) {
+    .projectsDiv{
+        margin: 6rem auto 0; 
+    }
 }

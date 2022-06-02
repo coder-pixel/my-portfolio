@@ -41,6 +41,11 @@ img {
   object-fit: contain;
 }
 
+svg {
+  width: 100%;
+  height: 100%;
+}
+
 /* portfolio section */
 
 .portfolio_container {
@@ -53,110 +58,78 @@ img {
   overflow-y: hidden;
 }
 
-.links {
-  color: var(--main-text-color);
-  font-size: 1.4rem;
-  font-weight: 600;
-  font-family: var(--text-family);
-  letter-spacing: 1px;
-  position: relative;
-  padding: 0.5rem;
-}
-.links::after {
-  content: "";
-  width: 0;
-  height: 2px;
-  background-color: var(--main-text-color);
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  /* transform: translateX(-50%); */
-  transition: 500ms;
-}
-.links:hover::after {
-  width: 100%;
-}
-.links:hover {
-  cursor: pointer;
-  opacity: 0.8;
-}
-a:visited {
-  color: inherit;
-}
-
-.allPageLinks {
-  position: absolute;
-  /* padding: 1rem; */
-}
-
-.projects {
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%) rotate(-90deg);
-}
-.about {
-  bottom: 5%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.socialLinks {
-  position: fixed;
-  bottom: 12rem;
-  left: 2%;
-}
-.socialLinks .linksDiv {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-.socialLinks a {
-  width: 25px;
-  height: 25px;
-  margin-bottom: .6rem;
-}
-/* .socialLinks a:hover{
-  
-} */
-.socialLinks a svg {
-  width: 100%;
-  height: 100%;
-}
-.socialLinks::after {
-  content: "";
-  width: 3px;
-  height: 12rem;
-  background-color: var(--main-text-color);
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
 /* header */
 .header {
   width: 100%;
   height: 3rem;
   /* background-color: rgb(41, 41, 41); */
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
-  padding: 1rem;
+  padding: 1rem 0;
 }
-.header div {
+.header > div {
   width: 33%;
+  /* background-color: aqua; */
+  margin: 0 auto;
 }
-.header .links {
-  text-align: end;
+.powerIconDiv {
+  text-align: center;
+  margin-left: auto;
 }
-.header .moveRight {
-  display: flex;
-  justify-content: end;
+.powerIconDiv svg {
+  width: 40px;
+  height: 40px;
+  /* background-color: aqua; */
+  padding: 0.2rem;
+  border: 2px solid var(--main-text-color);
+  border-radius: 50%;
 }
 
-.header svg {
-  font-size: 5rem;
-  width: 2.5rem;
-  height: 2.5rem;
-  fill: var(--main-text-color);
+.header .svgSize svg {
+  width: 40px;
+  height: 40px;
+  /* background-color: aqua; */
+}
+
+.socialLinks {
+  width: inherit;
+  /* background-color: red; */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.header .slash {
+  width: 8rem;
+  height: 3px;
+  background-color: var(--main-text-color);
+  margin-right: 0.5rem;
+}
+.header .slash:last-child {
+  margin: 0;
+  margin-left: 0.5rem;
+}
+.socialLinks .linksDiv {
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+.socialLinks a {
+  margin: 0 0.2rem;
+}
+.socialLinks a svg {
+  padding: 0.2rem;
+}
+
+.header .moveRight {
+  height: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.moveRight a {
+  fill: #000;
+  margin-top: 0.4rem;
 }
 
 /* home */
@@ -165,13 +138,15 @@ a:visited {
   height: calc(100vh - var(--main-padding) - 1rem - 3rem); /* top and bottom padding + navbar height */
   /* background-color: aquamarine; */
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
 .heroSection .contentDiv {
   /* background-color: bisque; */
   width: 80%;
-  margin: 0 1rem;
+  margin: 5rem 1rem 3rem;
   max-width: 900px;
   height: 80%;
   max-height: 500px;
@@ -181,10 +156,10 @@ a:visited {
   overflow: hidden;
 }
 .contentDiv > div {
-  flex: 1;
   padding: var(--padding-top-bottom) var(--padding-left-right);
 }
 .contentDiv .textDiv {
+  width: 50%;
   background-color: var(--main-text-color);
   transform: translateX(-1px);
   color: var(--main-background-color);
@@ -214,6 +189,7 @@ a:visited {
   color: rgba(255, 255, 255, 0.6);
 }
 .contentDiv .imgDiv {
+  width: 50%;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -223,9 +199,45 @@ a:visited {
   transform: scale(1.2) rotateY(180deg);
 }
 
+.btnDiv {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* background-color: antiquewhite; */
+  width: 100%;
+}
+
+.links {
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: var(--text-family);
+  letter-spacing: 1px;
+  position: relative;
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--main-text-color);
+  color: var(--main-background-color);
+  background-color: var(--main-text-color);
+}
+
+/* .links:hover::after {
+  width: 100%;
+} */
+.links:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+a:visited {
+  color: inherit;
+}
+
 /* media queries */
 
 @media screen and (max-width: 1200px) {
+  .header .svgSize svg {
+    width: 35px;
+    height: 35px;
+  }
+
   .contentDiv .textDiv h2 {
     font-size: 4rem;
   }
@@ -237,11 +249,18 @@ a:visited {
   }
 }
 @media screen and (max-width: 800px) {
+  .header .svgSize svg {
+    width: 30px;
+    height: 30px;
+  }
+  .header .slash {
+    width: 4rem;
+  }
   .links {
     font-size: 1.2rem;
   }
   .heroSection .contentDiv {
-    width: 70%;
+    width: 80%;
     height: 60%;
   }
   .contentDiv {
@@ -250,6 +269,7 @@ a:visited {
   }
   .contentDiv .textDiv {
     justify-content: space-around;
+    width: 100%;
     height: 100%;
     transform: none;
     background-color: var(--main-background-color);
@@ -280,6 +300,14 @@ a:visited {
 }
 
 @media screen and (max-width: 600px) {
+  .header .slash {
+    width: 2rem;
+  }
+  .powerIconDiv svg {
+    width: 35px;
+    height: 35px;
+  }
+
   .links {
     font-size: 1rem;
   }
@@ -287,13 +315,8 @@ a:visited {
     padding: 1rem calc(var(--main-padding) - 1rem) calc(var(--main-padding) - 1rem);
   }
 
-  .socialLinks {
-    bottom: 10rem;
-  }
-
-
   .heroSection .contentDiv {
-    width: 80%;
+    width: 90%;
     height: 60%;
   }
   .contentDiv .textDiv h2 {
@@ -318,21 +341,25 @@ a:visited {
 
 @media screen and (max-width: 450px) {
   .portfolio_container {
-    padding: 1rem calc(var(--main-padding) - 1.5rem) calc(var(--main-padding) - 1.5rem);
+    padding: 1rem .5rem;
+    /* position: relative; */
+  }
+
+  .header .svgSize svg {
+    width: 25px;
+    height: 25px;
   }
 
   .links {
-    font-size: .9rem;
-  }
-  .projects {
-    right: -4%;
-  }
-  .about {
-    bottom: 5%;
+    font-size: 0.9rem;
   }
 
   .header {
     padding: 0;
+  }
+
+  .socialLinks a {
+    margin: 0;
   }
 
   .heroSection .contentDiv {
