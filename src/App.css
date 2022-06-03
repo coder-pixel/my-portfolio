@@ -132,6 +132,8 @@ svg {
   margin-top: 0.4rem;
 }
 
+
+
 /* home */
 .heroSection {
   width: 100%;
@@ -219,12 +221,10 @@ svg {
   background-color: var(--main-text-color);
 }
 
-/* .links:hover::after {
-  width: 100%;
-} */
 .links:hover {
   cursor: pointer;
-  opacity: 0.8;
+  color: var(--main-text-color);
+  background-color: var(--main-background-color);
 }
 a:visited {
   color: inherit;

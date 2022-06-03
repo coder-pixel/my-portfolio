@@ -1,9 +1,30 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
+
+const entryTopVariants = {
+    hidden: {
+        y: "-150px",
+        opacity: 0
+    },
+    visible: {
+        y: 0,
+        opacity: 1,
+        transition: {
+            duration: .5,
+            ease: "easeInOut",
+            delay: .5
+        }
+    }
+}
 
 const Header = () => {
     return (
-        <div className='header'>
+        <motion.div className='header'
+            variants={entryTopVariants}
+            initial="hidden"
+            animate="visible"
+        >
             <div className="socialLinks">
                 <span className='slash'></span>
                 <div className="linksDiv svgSize">
@@ -26,7 +47,7 @@ const Header = () => {
                 </a>
                 <span className='slash'></span>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

@@ -1,17 +1,48 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
 
-const Home = () => {
 
+const buttonBorderVariants = {
+    onHover: {
+        scale: 1.15,
+        boxShadow: "0px 0px 8px #000",
+        transition: {
+            duration: .5,
+            yoyo: Infinity,
+        }
+    }
+}
+
+
+const entryBottomVariants =  {
+    hidden: {
+        y: "150px",
+        opacity: 0
+    },
+    visible: {
+        y: 0,
+        opacity: 1,
+        transition: {
+            duration: .5,
+            ease: "easeInOut",
+            delay: .5
+        }
+    }
+}
+
+const Home = ({ fadeInVariants }) => {
     return (
-        <div className="heroSection">
+        <motion.div className="heroSection"
+            variants={fadeInVariants}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+        >
 
-            <div className="contentDiv">
+            <motion.div className="contentDiv">
                 <div className="textDiv">
                     <h2>Hello, <span>I'm Sauvik!</span></h2>
-
-                    {/* <p>I'm a self-taught Front-end Web Developer and an aspiring fullstack dev.</p> */}
-                    {/* <p>I build interactive websites that run across platforms & devices.</p> */}
                     <p>
                         I love to create simple yet beautiful websites.
                     </p>
@@ -21,17 +52,27 @@ const Home = () => {
                     {/* <img src="./images/DrawKit Larry Character Illustration (5).svg" alt="" /> */}
                     <img src="./images/DrawKit Larry Character Illustration (2).svg" alt="" />
                 </div>
-            </div>
+            </motion.div>
 
-            <div className="btnDiv">
+            <motion.div className="btnDiv"
+                variants={entryBottomVariants}
+                initial="hidden"
+                animate="visible"
+            >
                 <Link to="/projects">
-                    <h4 className="links">Projects</h4>
+                    <motion.h4 className="links"
+                        whileHover={{scale: 1.1}}
+                        whileTap={{scale: .9}}
+                    >Projects</motion.h4>
                 </Link>
                 <Link to="/about">
-                    <h4 className="links">About Me</h4>
+                    <motion.h4 className="links"
+                        whileHover={{scale: 1.1}}
+                        whileTap={{scale: .9}}
+                    >About Me</motion.h4>
                 </Link>
-            </div>
-        </div>
+            </motion.div>
+        </motion.div>
     )
 }
 

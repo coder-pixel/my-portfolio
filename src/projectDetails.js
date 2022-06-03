@@ -2,28 +2,28 @@ export const projectDetails = [
     {
         id: 1,
         title: "Movie Database App",
-        description: "A React app where a user can search for a movie and also add it to their watchlist. ",
+        description: "A simple movie searching website based on React Js. It also implements context api for global state management.",
         github_link: "https://github.com/coder-pixel/movie-database-app/",
         hosted_link: "https://movieapp27.netlify.app/"
     },
     {
         id: 2,
         title: "My Portfolio (This site)",
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam sapiente ipsum id perferendis sit deserunt, iusto quidem beatae enim, neque odit quas, dolor amet? Dignissimos?",
+        description: "This website itself is made from React Js alongwith Framer Js for smooth animations.",
         github_link: "https://github.com/coder-pixel/my-portfolio",
         hosted_link: "https://my-portfolio27.netlify.app/"
     },
     {
         id: 3,
         title: "React Website",
-        description: "A sample React website",
+        description: "A simple portfolio website made on top of React, with various components for various sections.",
         github_link: "https://github.com/coder-pixel/react-portfolio-practice",
         hosted_link: "https://eclectic-youtiao-3eb967.netlify.app/"
     },
     {
         id: 4,
         title: "React Projects Collection",
-        description: "A bunch of other mini-projects I created while learning FrontEnd Dev. - Image Gallery, Color Generator, Accordion etc.",
+        description: "A bunch of other mini-projects, that I created while learning FrontEnd Dev. - Image Gallery, Color Generator, Accordion etc.",
         github_link: "https://github.com/coder-pixel/react-projects-collections",
         hosted_link: "https://react-projects-collections.netlify.app/"
     },

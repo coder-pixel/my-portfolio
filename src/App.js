@@ -5,9 +5,28 @@ import About from './Components/About';
 import Header from './Components/Header';
 import Home from './Components/Home';
 import Projects from './Components/Projects';
+import { AnimatePresence, motion } from "framer-motion";
+import Particle from './Components/Particle';
+
+const fadeInVariants = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: .5,
+      ease: "easeInOut"
+    }
+  },
+  exit: {
+    y: "100vh",
+    transition: { ease: "easeInOut" }
+  }
+}
 
 function App() {
-  const [currWidth, setCurrWidth] = useState(document.body.clientWidth);
+  const [currColor, setCurrColor] = useState("#000")
 
   const location = useLocation()
   const path = location.pathname
@@ -36,6 +55,8 @@ function App() {
       githubIconPath.setAttribute("fill", "#fcf6f4");
       linkedinIconPath.setAttribute("fill", "#fcf6f4");
       mailIconPath.setAttribute("fill", "#fcf6f4");
+    
+      setCurrColor("#fcf6f4")
     }
     else {
       root.style.setProperty('--main-text-color', '#000');
@@ -47,6 +68,8 @@ function App() {
       mailIconPath.setAttribute("fill", "#000");
 
       // document.querySelector(".socialLinks").style.top = "-5%";
+    
+      setCurrColor("#000")
     }
   }
 
@@ -57,16 +80,20 @@ function App() {
 
 
   return (
-    <div className="portfolio_container">
+    <motion.div className="portfolio_container">
       <Header />
-
-      <Routes>
-        <Route exact path='/' element={<Home />} />
-        <Route path='/projects' element={<Projects />} />
-        <Route path='/about' element={<About />} />
-        {/* <Route path='/myskills' element={<MySkills />} /> */}
-      </Routes>
-    </div>
+      <Particle currColor={currColor} />
+      <AnimatePresence
+        exitBeforeEnter
+      >
+        <Routes location={location} key={location.key} >
+          <Route exact path='/' element={<Home fadeInVariants={fadeInVariants} />} />
+          <Route path='/projects' element={<Projects fadeInVariants={fadeInVariants} />} />
+          <Route path='/about' element={<About fadeInVariants={fadeInVariants} />} />
+          {/* <Route path='/myskills' element={<MySkills />} /> */}
+        </Routes>
+      </AnimatePresence>
+    </motion.div>
   );
 }
 
