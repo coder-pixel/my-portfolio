@@ -26,7 +26,7 @@ function App() {
     var linkedinIconPath = document.querySelector(".linkedin svg path")
     var mailIconPath = document.querySelector(".mail svg path")
 
-    if (path == "/about" || path == "/projects") {
+    if (path == "/projects") {
       // Set the value of variable --blue to another value (in this case "lightblue")
       root.style.setProperty('--main-text-color', '#fcf6f4');
       root.style.setProperty('--main-background-color', '#000');

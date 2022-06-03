@@ -9,13 +9,13 @@
     display: grid;
     grid-gap: 2rem;
     /* grid-template-columns: repeat(auto-fill, 300px); */
-    grid-template-columns: repeat(auto-fill, minmax(250px, 350px));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 320px));
     justify-content: center;
 }
-.projectsDiv span{
+.projectsDiv > span{
     position: absolute;
     top: 5rem;
-    font-size: calc(2rem + 5vw);
+    font-size: calc(3rem + 1vw);
     font-weight: 800;
     font-family: "Open Sans", sans-serif;
     text-transform: uppercase;
@@ -35,6 +35,10 @@
     border-top-right-radius: 50px;
     border-bottom-left-radius: 50px;
     transition: 500ms;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .project:hover{
@@ -49,10 +53,20 @@
     margin-bottom: 1.5rem;
 }
 .project p{
-    font-size: 1rem;
+    font-size: calc(.8rem + .3vw);
     font-family: var(--text-family);
     margin-bottom: 1.5rem;
 }
+.project span{
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--main-background-color);
+    margin: 1rem 0;
+}
+.project:hover span{
+    background-color: var(--main-text-color);
+} 
 
 .project .projects_btnGrp{
     display: flex;
@@ -60,10 +74,13 @@
     width: 100%;
     /* background-color: aqua; */
 }
-.project .projects_btnGrp button{
+.project .projects_btnGrp a{
+    display: inline-block;
+    width: 45%;
+}
+.project .projects_btnGrp a button{
     border: none;
     outline: none;
-    width: 45%;
     background-color: var(--main-background-color);
     color: var(--main-text-color);
     cursor: pointer;
@@ -96,13 +113,18 @@
 .project .projects_btnGrp button:last-child{
     border-radius: 0;
     border-top-right-radius: 50px;
-    padding-right: 1.8rem;
+    padding-right: 2rem;
 }
 .project:hover button svg{
     fill: var(--main-background-color);
 }
 
 
+@media screen and (max-width: 800px) {
+    .projectsDiv{
+        margin: 7rem auto 0; 
+    }
+}
 @media screen and (max-width: 600px) {
     .projectsDiv{
         margin: 6rem auto 0; 

@@ -1,57 +1,152 @@
-.aboutme{
-    width: 90%;
+.aboutme {
+    width: 100%;
     display: flex;
     justify-content: space-around;
-    align-items: center;
-    /* background-color: aquamarine; */
-    margin: 12rem auto 0;
+    /* background-color: rgb(28, 48, 41); */
+    margin: 9rem auto 0;
 }
-.aboutme_content{
-    width: 45%;
-    max-width: 600px;
+.aboutme_content {
+    width: 35vw;
     height: auto;
-    min-height: 400px;
     color: var(--main-text-color);
     padding: 2rem;
     border: 2px solid var(--main-text-color);
-    border-radius: 5px;
-    position: relative;
-}
-.aboutme_content::before{
-    content: "About";
-    font-size: 4rem;
-    font-weight: 800;
-    font-family: "Open Sans", sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: var(--main-text-color);
-    opacity: .4;
-    z-index: 0;
-    position: absolute;
-    top: -25%;
-    left: -10%;
-}
-.aboutme_content:last-child::before{
-    content: "Skills";
+    font-family: var(--text-family);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.aboutme_content p{
+.aboutme_content:hover{
+    background-color: var(--main-text-color);
+    color: var(--main-background-color);
+}
+.aboutme_content .content_heading{
+    margin: 0 auto;
     margin-bottom: 1rem;
-    font-size: 1.2rem;
-    color: var(--main-text-color);
-    letter-spacing: 1px;
-    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: aqua; */
+    font-size: 1.8rem;
+    font-weight: 600;
+    font-family: var(--title-family);
+}
+.aboutme_content .content_heading svg{
+    height: 50px;
+    width: 50px;
+    margin-right: .5rem;
+}
+.aboutme_content:hover .content_heading svg{
+    fill: var(--main-background-color);
 }
 
-@media screen and (max-width: 1000px) {
+.aboutme_content p {
+    margin-bottom: 2rem;
+    font-size: 1.4rem;
+    color: inherit;
+    letter-spacing: 1px;
+    font-family: var(--main-text-color);
+}
+.aboutme_content p:last-child {
+    margin-bottom: 0;
+}
+
+.bold_subheading{
+    font-weight: 600;
+    position: relative;
+    font-size: 1.3rem;
+    align-self: flex-start;
+}
+.bold_subheading::after{
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: var(--main-background-color);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 500ms;
+}
+.bold_subheading:hover::after{
+    width: 100%;
+}
+.bold_subheading svg{
+    fill: var(--main-text-color);
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: -5%;
+    right: -10%;
+}
+.aboutme_content:hover .bold_subheading svg{
+    fill: var(--main-background-color);
+}
+
+.skills_content .bold_subheading::after{
+    display: none;
+}
+.skills_content .subContent{
+    margin-bottom: 1rem;
+}
+.skills_content .subContent:last-child{
+    margin: 0;
+}
+.skills_content .subContent p{
+    padding: 0 1.5rem;
+}
+
+@media screen and (max-width: 1200px) {
     .aboutme{
+        justify-content: space-between;
+        margin-top: 5rem;
+    }
+    .aboutme_content {
+        width: 43vw;
+    }
+    .aboutme_content .content_heading{
+        font-size: 1.5rem;
+    }
+    .aboutme_content p{
+        font-size: 1.2rem;
+    }
+}
+@media screen and (max-width: 800px) {
+    .aboutme {
         flex-direction: column;
+        align-items: center;
     }
     .aboutme_content{
-        width: 100%;
-        max-width: 500px;
+        width: 60vw;
+        margin-bottom: 5rem;
+    }
+
+    .bold_subheading{
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .aboutme {
+        width: 95%;
+    }
+    .aboutme_content{
+        width: 90vw;
+        max-width: 400px;
+    }
+    .aboutme_content .content_heading{
+        font-size: 1.2rem;
+    }
+    .aboutme_content p {
+        font-size: 1rem;
+    }   
+}
+
+@media screen and (max-width: 450px) {
+    .aboutme_content {
+        padding: 1rem;
     }
     .aboutme_content:first-child{
-        margin-bottom: 10rem;
+        text-align: center;
     }
 }
