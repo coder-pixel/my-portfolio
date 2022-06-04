@@ -84,7 +84,6 @@ svg {
   padding: 0.2rem;
   border: 2px solid var(--main-text-color);
   border-radius: 50%;
-  filter: drop-shadow(5px 4px 3px var(--main-text-color));
 }
 
 .header .svgSize svg {
@@ -112,32 +111,14 @@ svg {
 }
 .socialLinks .linksDiv {
   height: 30px;
-  /* background-color: aquamarine; */
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 .socialLinks a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
   margin: 0 0.2rem;
-  /* background-color: aqua; */
-  border-radius: 50%;
-}
-.socialLinks a:hover {
-  filter: drop-shadow(2px 2px 15px var(--main-text-color));
-  /* background-color: #000; */
-  color: #fcf6f4;
-}
-.socialLinks a:hover svg {
-  fill: #fcf6f4;
 }
 .socialLinks a svg {
   padding: 0.2rem;
-  z-index: 99;
 }
 
 .header .moveRight {
@@ -149,10 +130,6 @@ svg {
 .moveRight a {
   fill: #000;
   margin-top: 0.4rem;
-  transition: 500ms;
-}
-.moveRight a:hover{
-  filter: drop-shadow(2px 2px 15px var(--main-text-color));
 }
 
 /* home */
