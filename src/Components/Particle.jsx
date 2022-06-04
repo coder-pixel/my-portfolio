@@ -5,7 +5,6 @@ import { loadFull } from "tsparticles"
 
 
 function Particle({ currColor }) {
-
     const particlesInit = async (main) => {
         // console.log(main)
 
@@ -24,14 +23,21 @@ function Particle({ currColor }) {
                 preset: "stars",
                 particles: {
                     number: {
-                        value: 30
+                        value: 20,
                     },
                     color: currColor,
                     shape: {
-                        type: "star",
+                        type: "circle",
                         options: {
                             sides: 5
                         }
+                    },
+                    line_linked: {
+                        enable: true,
+                        distance: 300,
+                        color: currColor,
+                        opacity: 0.4,
+                        width: 2
                     },
                     move: {
                         enable: true,
