@@ -54,6 +54,21 @@
     margin-bottom: 0;
 }
 
+.aboutme_content .linksGrp{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* cursor: pointer; */
+}
+.linksGrp .downloadLink{
+    padding-right: 1rem;
+}
+.linksGrp .downloadLink svg{
+    width: 25px;
+    height: 25px;
+    transform: translateY(5px);
+}
+
 .bold_subheading{
     font-weight: 600;
     position: relative;
