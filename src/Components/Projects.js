@@ -3,7 +3,7 @@ import "./Projects.css"
 import { projectDetails } from '../projectDetails'
 import { motion } from 'framer-motion'
 
-
+console.log(projectDetails)
 const Item = {
   hidden: {
     scale: 0
