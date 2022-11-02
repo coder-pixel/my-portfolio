@@ -27,7 +27,7 @@
 
 .project{
     /* background-color: aliceblue; */
-    height: 350px;
+    height: auto;
     background-color: var(--main-text-color);
     padding: 2rem;
     color: var(--main-background-color);
