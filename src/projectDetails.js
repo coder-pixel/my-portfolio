@@ -5,7 +5,7 @@ export const projectDetails = [
         description: "A simple movie searching website based on React Js. It also implements context api for global state management.",
         github_link: "https://github.com/coder-pixel/movie-database-app/",
         // hosted_link: "https://movieapp27.netlify.app/"
-        hosted_link: "https://movie-database27.netlify.app/add"
+        hosted_link: "https://movie-database27.netlify.app/"
     },
     {
         id: 2,
