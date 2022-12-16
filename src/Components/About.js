@@ -29,7 +29,8 @@ const About = ({ fadeInVariants }) => {
               <path fill-rule="evenodd" d="M15,10 L15,14 C15,15.1045695 14.1045695,16 13,16 L2,16 C0.8954305,16 0,15.1045695 0,14 L0,3 C0,1.8954305 0.8954305,1 2,1 L6,1 L6,3 L2,3 L2,14 L13,14 L13,10 L15,10 Z M13.9971001,3.41421356 L7.70420685,9.70710678 L6.28999329,8.29289322 L12.5828865,2 L8.99710007,2 L8.99710007,0 L15.9971001,0 L15.9971001,7 L13.9971001,7 L13.9971001,3.41421356 Z" />
             </svg>
           </Link>
-          <a href='https://drive.google.com/uc?export=download&id=1LJgu9TZyMIDbnuRQMjD99SmLExzxhe16' className='downloadLink bold_subheading'>
+          {/* old link: https://drive.google.com/uc?export=download&id=1LJgu9TZyMIDbnuRQMjD99SmLExzxhe16 */}
+          <a href='https://drive.google.com/uc?export=download&id=1NCf45Ho_OP8d4LclMl0ZUKigmhBf9jph' className='downloadLink bold_subheading'>
             Resume
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M 15 4 L 15 20.5625 L 9.71875 15.28125 L 8.28125 16.71875 L 15.28125 23.71875 L 16 24.40625 L 16.71875 23.71875 L 23.71875 16.71875 L 22.28125 15.28125 L 17 20.5625 L 17 4 Z M 7 26 L 7 28 L 25 28 L 25 26 Z" /></svg>
           </a>
@@ -48,11 +49,11 @@ const About = ({ fadeInVariants }) => {
         </p>
         <div className="subContent">
           <h2 className='bold_subheading'>Skills</h2>
-          <p>Html, Css, Js, React, Redux, Sass, Bootstrap etc.</p>
+          <p>Javascript, React, Redux, Next Js, HTML5/CSS3, Bootstrap, SQL, Express/Mongo DB (basics)</p>
         </div>
         <div className="subContent">
           <h2 className='bold_subheading'>Tools</h2>
-          <p>Github, Heroku, Netlify, VScode etc.</p>
+          <p>Github, Heroku, Netlify, VScode, Vercel etc.</p>
         </div>
       </div>
     </motion.div>
