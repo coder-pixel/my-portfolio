@@ -12,7 +12,7 @@ export const projectDetails = [
         title: "Booking App",
         description: "A hotel booking app to book your favourite hotels.",
         github_link: "https://github.com/coder-pixel/booking-app",
-        hosted_link: "https://booking-app27.netlify.app/hotels"
+        hosted_link: "https://booking-app27.netlify.app/"
     },
     {
         id: 3,
