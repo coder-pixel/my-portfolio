@@ -30,13 +30,12 @@ const About = ({ fadeInVariants }) => {
             </svg>
           </Link>
           {/* old link: https://drive.google.com/uc?export=download&id=1LJgu9TZyMIDbnuRQMjD99SmLExzxhe16 */}
-          <a href='https://drive.google.com/uc?export=download&id=1NCf45Ho_OP8d4LclMl0ZUKigmhBf9jph' className='downloadLink bold_subheading'>
+          <a href='https://drive.google.com/uc?export=download&id=1sWIz7ddZEakOOwa1JgnQVxnig7Xr6TyC' className='downloadLink bold_subheading'>
             Resume
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M 15 4 L 15 20.5625 L 9.71875 15.28125 L 8.28125 16.71875 L 15.28125 23.71875 L 16 24.40625 L 16.71875 23.71875 L 23.71875 16.71875 L 22.28125 15.28125 L 17 20.5625 L 17 4 Z M 7 26 L 7 28 L 25 28 L 25 26 Z" /></svg>
           </a>
         </div>
       </div>
-
 
 
       <div className="aboutme_content skills_content">
