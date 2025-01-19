@@ -51,7 +51,8 @@ const About = ({ fadeInVariants }) => {
           </Link>
           {/* old link: https://drive.google.com/uc?export=download&id=1LJgu9TZyMIDbnuRQMjD99SmLExzxhe16 */}
           <a
-            href="https://drive.google.com/uc?export=download&id=1sWIz7ddZEakOOwa1JgnQVxnig7Xr6TyC"
+            // href="https://drive.google.com/uc?export=download&id=1sWIz7ddZEakOOwa1JgnQVxnig7Xr6TyC"
+            href="https://drive.google.com/uc?export=download&id=1dUPhokNcWnLui0JfVqVdkhDr_YYfEStH"
             className="downloadLink bold_subheading"
           >
             Resume
